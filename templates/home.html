@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body>
+
+    <form action="/result" method="POST">
+        <label for="cntry">country:</label>
+        <input type="text" id="cntry" name="cntry"><br>
+
+        <label for="b_s">beer_servings:</label>
+        <input type="text" id="b_s" name="b_s"><br>
+
+        <label for="s_s">spirit_servings:</label>
+        <input type="text" id="s_s" name="s_s"><br>
+
+        <label for="w_s">wine_servings:</label>
+        <input type="text" id="w_s" name="w_s"><br>
+
+        <label for="cntnt">continent:</label>
+        <input type="text" id="cntnt" name="cntnt"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
