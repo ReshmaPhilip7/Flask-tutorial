@@ -21,8 +21,8 @@ def result_page():
     w_s = int(request.form["w_s"])
     cntnt = int(request.form["cntnt"])
 
-    file_name = "model.pkl"
-    with open(path.join("static", file_name), "rb") as f:
+    model_path = path.join(app.root_path, "static", "model.pkl")
+    with open(model_path, "rb") as f:
         lr_model = pickle.load(f)
 
     pred = lr_model.predict(np.array([[cntry, b_s, s_s, w_s, cntnt]]))[0]
